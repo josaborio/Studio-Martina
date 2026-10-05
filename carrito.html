@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito | martina.</title>
+  <meta name="description" content="Revisa los muebles que agregaste a tu carrito en martina. y confirma tu pedido.">
+  <meta name="theme-color" content="#fdfaf3">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Carrito | martina.">
+  <meta property="og:description" content="Revisa los muebles que agregaste a tu carrito en martina. y confirma tu pedido.">
+  <meta property="og:locale" content="es_CR">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@800&family=Roboto+Condensed:wght@700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menú</span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Principal">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--sub">
+            <div class="nav__pill">
+              <a class="nav__link nav__link--split" href="productos.html">Productos</a>
+              <button class="nav__chev" type="button" aria-expanded="false" aria-controls="submenu-productos">
+                <span class="icon icon--chevron" aria-hidden="true"></span>
+                <span class="visually-hidden">Mostrar categorías de productos</span>
+              </button>
+            </div>
+            <ul class="nav__sub" id="submenu-productos">
+            <li><a class="nav__sub-link" href="productos.html">Todos los productos</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=silla">Sillas</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=butaca">Butacas</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=taburete">Taburetes</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=mecedora">Mecedoras</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a class="nav__pill nav__link" href="contacto.html">Contacto</a></li>
+          <li class="nav__item"><a class="nav__pill nav__link" href="nosotros.html">Nosotros</a></li>
+        </ul>
+      </nav>
+      <a class="logo" href="index.html" aria-label="martina., ir al inicio">martina.</a>
+      <a class="cart-link" href="carrito.html" aria-label="Carrito de compras, 0 productos" aria-current="page">
+        <span class="icon icon--cart" aria-hidden="true"></span>
+        <span class="cart-link__count" data-cart-count></span>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <div class="cart">
+      <section aria-labelledby="items-title">
+        <h1 class="visually-hidden" id="items-title">Carrito de compras</h1>
+        <p class="form-status" id="cart-status" tabindex="-1" hidden>¡Gracias por tu pedido! Te escribiremos al correo o teléfono que tengamos registrado para coordinar el pago y la entrega.</p>
+        <ul class="cart__items" id="cart-items"></ul>
+      </section>
+
+      <aside class="summary" aria-labelledby="summary-title">
+        <h2 class="summary__title" id="summary-title">Tus productos</h2>
+        <ul class="summary__lines" id="cart-lines"></ul>
+        <p class="summary__total"><span>Total</span><span id="cart-total">₡0</span></p>
+        <div class="summary__actions">
+          <button class="btn" id="cart-buy" type="button" disabled>Comprar</button>
+          <button class="summary__clear" id="cart-clear" type="button" hidden>Vaciar carrito</button>
+        </div>
+      </aside>
+    </div>
+
+    <dialog class="modal" id="checkout" aria-labelledby="checkout-title">
+      <h2 class="modal__title" id="checkout-title">Confirma tu pedido</h2>
+      <p>Total a pagar: <strong id="checkout-total">₡0</strong>. Al confirmar, nuestro equipo te contactará para coordinar el pago y la entrega.</p>
+      <div class="modal__actions">
+        <button class="btn btn--ghost" id="checkout-cancel" type="button">Cancelar</button>
+        <button class="btn" id="checkout-confirm" type="button">Confirmar pedido</button>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <ul class="social">
+        <li><a class="social__link" href="https://www.facebook.com/martina.studio" target="_blank" rel="noopener noreferrer"><span class="icon icon--facebook" aria-hidden="true"></span><span class="visually-hidden">Facebook de martina. (se abre en una pestaña nueva)</span></a></li>
+        <li><a class="social__link" href="https://www.instagram.com/martina.studio" target="_blank" rel="noopener noreferrer"><span class="icon icon--instagram" aria-hidden="true"></span><span class="visually-hidden">Instagram de martina. (se abre en una pestaña nueva)</span></a></li>
+        <li><a class="social__link" href="mailto:martina@studio.com"><span class="icon icon--mail" aria-hidden="true"></span><span class="visually-hidden">Enviar correo a martina@studio.com</span></a></li>
+      </ul>
+      <div class="site-footer__meta">
+        <a class="site-footer__link" href="preguntas-frecuentes.html">FAQ</a>
+        <p class="site-footer__copy">&copy; Martina Studio 2026</p>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

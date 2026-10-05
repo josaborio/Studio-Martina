@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nosotros | martina.</title>
+  <meta name="description" content="Conoce a martina. studio: un estudio de mobiliario contemporáneo que piensa en tu hogar, entre la arquitectura, la forma y la funcionalidad.">
+  <meta name="theme-color" content="#fdfaf3">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nosotros | martina.">
+  <meta property="og:description" content="Conoce a martina. studio: un estudio de mobiliario contemporáneo que piensa en tu hogar, entre la arquitectura, la forma y la funcionalidad.">
+  <meta property="og:locale" content="es_CR">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@800&family=Roboto+Condensed:wght@700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menú</span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Principal">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--sub">
+            <div class="nav__pill">
+              <a class="nav__link nav__link--split" href="productos.html">Productos</a>
+              <button class="nav__chev" type="button" aria-expanded="false" aria-controls="submenu-productos">
+                <span class="icon icon--chevron" aria-hidden="true"></span>
+                <span class="visually-hidden">Mostrar categorías de productos</span>
+              </button>
+            </div>
+            <ul class="nav__sub" id="submenu-productos">
+            <li><a class="nav__sub-link" href="productos.html">Todos los productos</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=silla">Sillas</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=butaca">Butacas</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=taburete">Taburetes</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=mecedora">Mecedoras</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a class="nav__pill nav__link" href="contacto.html">Contacto</a></li>
+          <li class="nav__item"><a class="nav__pill nav__link is-current" href="nosotros.html" aria-current="page">Nosotros</a></li>
+        </ul>
+      </nav>
+      <a class="logo" href="index.html" aria-label="martina., ir al inicio">martina.</a>
+      <a class="cart-link" href="carrito.html" aria-label="Carrito de compras, 0 productos">
+        <span class="icon icon--cart" aria-hidden="true"></span>
+        <span class="cart-link__count" data-cart-count></span>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <article class="about">
+      <h1 class="about__title">Un studio que piensa en tu hogar</h1>
+      <p class="about__text">En <strong>martina.</strong> creamos piezas de mobiliario que habitan el punto exacto entre la arquitectura, la forma y la funcionalidad. Nacemos de la pasión por el diseño contemporáneo y la convicción de que cada objeto en un espacio debe contar una historia de confort, carácter y sofisticación inteligente.</p>
+      <p class="about__text">No solo diseñamos muebles; proyectamos la forma en que vives tus ambientes. Cada una de nuestras colecciones combina procesos de fabricación honestos, materiales de alta calidad y un rigor estético pensado para elevar tu cotidianidad. Desde líneas geométricas limpias hasta piezas de acento con personalidad propia, desarrollamos soluciones que responden al estilo de vida actual sin perder la calidez del hogar.</p>
+
+      <h2 class="visually-hidden">Cómo trabajamos</h2>
+      <ul class="about__pillars">
+        <li class="about__pillar">
+          <h3 class="about__pillar-title">Forma con propósito</h3>
+          <p class="about__pillar-text">Cada línea tiene una razón de ser: comodidad, proporción o durabilidad.</p>
+        </li>
+        <li class="about__pillar">
+          <h3 class="about__pillar-title">Fabricación honesta</h3>
+          <p class="about__pillar-text">Materiales a la vista, uniones bien resueltas y garantía por defectos de fabricación.</p>
+        </li>
+        <li class="about__pillar">
+          <h3 class="about__pillar-title">A tu medida</h3>
+          <p class="about__pillar-text">En varias colecciones puedes elegir material y color. <a href="contacto.html">Cuéntanos tu idea</a>.</p>
+        </li>
+      </ul>
+
+      <span class="wordmark about__wordmark" role="img" aria-label="martina."><span class="wordmark__line" aria-hidden="true">mar</span><span class="wordmark__line" aria-hidden="true">tina<span class="wordmark__dot"></span></span></span>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <ul class="social">
+        <li><a class="social__link" href="https://www.facebook.com/martina.studio" target="_blank" rel="noopener noreferrer"><span class="icon icon--facebook" aria-hidden="true"></span><span class="visually-hidden">Facebook de martina. (se abre en una pestaña nueva)</span></a></li>
+        <li><a class="social__link" href="https://www.instagram.com/martina.studio" target="_blank" rel="noopener noreferrer"><span class="icon icon--instagram" aria-hidden="true"></span><span class="visually-hidden">Instagram de martina. (se abre en una pestaña nueva)</span></a></li>
+        <li><a class="social__link" href="mailto:martina@studio.com"><span class="icon icon--mail" aria-hidden="true"></span><span class="visually-hidden">Enviar correo a martina@studio.com</span></a></li>
+      </ul>
+      <div class="site-footer__meta">
+        <a class="site-footer__link" href="preguntas-frecuentes.html">FAQ</a>
+        <p class="site-footer__copy">&copy; Martina Studio 2026</p>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

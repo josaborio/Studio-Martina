@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos | martina.</title>
+  <meta name="description" content="Catálogo de muebles martina.: sillas, butacas, taburetes y mecedoras. Filtra por color, material, tamaño, precio y colección.">
+  <meta name="theme-color" content="#fdfaf3">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Productos | martina.">
+  <meta property="og:description" content="Catálogo de muebles martina.: sillas, butacas, taburetes y mecedoras. Filtra por color, material, tamaño, precio y colección.">
+  <meta property="og:locale" content="es_CR">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@800&family=Roboto+Condensed:wght@700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menú</span>
+      </button>
+      <nav class="nav" id="menu-principal" aria-label="Principal">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--sub">
+            <div class="nav__pill is-current">
+              <a class="nav__link nav__link--split" href="productos.html" aria-current="page">Productos</a>
+              <button class="nav__chev" type="button" aria-expanded="false" aria-controls="submenu-productos">
+                <span class="icon icon--chevron" aria-hidden="true"></span>
+                <span class="visually-hidden">Mostrar categorías de productos</span>
+              </button>
+            </div>
+            <ul class="nav__sub" id="submenu-productos">
+            <li><a class="nav__sub-link" href="productos.html">Todos los productos</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=silla">Sillas</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=butaca">Butacas</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=taburete">Taburetes</a></li>
+            <li><a class="nav__sub-link" href="productos.html?tipo=mecedora">Mecedoras</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a class="nav__pill nav__link" href="contacto.html">Contacto</a></li>
+          <li class="nav__item"><a class="nav__pill nav__link" href="nosotros.html">Nosotros</a></li>
+        </ul>
+      </nav>
+      <a class="logo" href="index.html" aria-label="martina., ir al inicio">martina.</a>
+      <a class="cart-link" href="carrito.html" aria-label="Carrito de compras, 0 productos">
+        <span class="icon icon--cart" aria-hidden="true"></span>
+        <span class="cart-link__count" data-cart-count></span>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido" class="catalog">
+    <div class="container">
+      <h1 class="visually-hidden">Catálogo de productos</h1>
+
+      <form class="catalog__bar" id="buscador" role="search">
+        <label class="visually-hidden" for="buscar">Buscar muebles</label>
+        <input class="catalog__search" id="buscar" type="search" placeholder="Buscar por nombre, material o tipo…" autocomplete="off">
+        <label class="visually-hidden" for="orden">Ordenar por</label>
+        <select class="catalog__sort" id="orden">
+          <option value="relevancia">Destacados primero</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+        </select>
+      </form>
+
+      <div class="catalog__layout">
+        <div>
+          <button class="btn btn--ghost btn--small filters-toggle" id="filtros-toggle" type="button" aria-expanded="false" aria-controls="panel-filtros">Filtros</button>
+          <aside class="filters" id="panel-filtros" aria-label="Filtros de productos">
+            <form id="filtros">
+        <details class="filter">
+          <summary class="filter__summary">Color</summary>
+          <div class="filter__options">
+            <label class="check"><input class="check__input" type="checkbox" name="color" value="cafe"><span>Café</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="color" value="negro"><span>Negro</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="color" value="verde"><span>Verde</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="color" value="natural"><span>Natural</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="color" value="blanco"><span>Blanco</span></label>
+          </div>
+        </details>
+        <details class="filter">
+          <summary class="filter__summary">Tipo</summary>
+          <div class="filter__options">
+            <label class="check"><input class="check__input" type="checkbox" name="tipo" value="silla"><span>Silla</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="tipo" value="butaca"><span>Butaca</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="tipo" value="taburete"><span>Taburete</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="tipo" value="mecedora"><span>Mecedora</span></label>
+          </div>
+        </details>
+        <details class="filter">
+          <summary class="filter__summary">Tamaño</summary>
+          <div class="filter__options">
+            <label class="check"><input class="check__input" type="checkbox" name="tamano" value="pequeno"><span>Pequeño</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="tamano" value="mediano"><span>Mediano</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="tamano" value="grande"><span>Grande</span></label>
+          </div>
+        </details>
+        <details class="filter">
+          <summary class="filter__summary">Material</summary>
+          <div class="filter__options">
+            <label class="check"><input class="check__input" type="checkbox" name="material" value="madera"><span>Madera</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="material" value="metal"><span>Metal</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="material" value="tapizado"><span>Tapizado</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="material" value="bejuco"><span>Bejuco</span></label>
+          </div>
+        </details>
+        <details class="filter">
+          <summary class="filter__summary">Precio</summary>
+          <div class="filter__options">
+            <label class="check"><input class="check__input" type="checkbox" name="precio" value="bajo"><span>Menos de ₡100.000</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="precio" value="medio"><span>₡100.000 – ₡250.000</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="precio" value="alto"><span>Más de ₡250.000</span></label>
+          </div>
+        </details>
+        <details class="filter">
+          <summary class="filter__summary">Forma</summary>
+          <div class="filter__options">
+            <label class="check"><input class="check__input" type="checkbox" name="forma" value="recta"><span>Recta</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="forma" value="curva"><span>Curva</span></label>
+          </div>
+        </details>
+        <details class="filter">
+          <summary class="filter__summary">Disponibilidad</summary>
+          <div class="filter__options">
+            <label class="check"><input class="check__input" type="checkbox" name="disponibilidad" value="stock"><span>En stock</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="disponibilidad" value="encargo"><span>Por encargo</span></label>
+          </div>
+        </details>
+        <details class="filter">
+          <summary class="filter__summary">Colección</summary>
+          <div class="filter__options">
+            <label class="check"><input class="check__input" type="checkbox" name="coleccion" value="nordica"><span>Nórdica</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="coleccion" value="contemporanea"><span>Contemporánea</span></label>
+            <label class="check"><input class="check__input" type="checkbox" name="coleccion" value="minimalista"><span>Minimalista</span></label>
+          </div>
+        </details>
+              <button class="btn btn--ghost btn--small filters__clear" type="button" data-clear-filters>Limpiar filtros</button>
+            </form>
+          </aside>
+        </div>
+
+        <section aria-label="Resultados">
+          <p class="catalog__status" id="resultados" role="status">8 productos</p>
+          <ul class="product-grid" id="catalogo">
+      <li class="product-card" data-id="butaca-cacao" data-nombre="Butaca Cacao" data-precio="285000" data-img="img/butaca-cacao.jpg" data-info="Tapizado y estructura de metal" data-tipo="butaca" data-color="cafe" data-tamano="grande" data-material="metal tapizado" data-precio-rango="alto" data-forma="recta" data-disponibilidad="stock" data-coleccion="contemporanea" data-busqueda="butaca cacao tapizado y estructura de metal butaca cafe metal tapizado contemporanea">
+        <figure class="product-card__media">
+          <img class="product-card__img" src="img/butaca-cacao.jpg" alt="Butaca tapizada en marrón con estructura de metal verde oscuro junto a una ventana" width="274" height="284" loading="lazy">
+        </figure>
+        <div class="product-card__head">
+          <h2 class="product-card__name">Butaca Cacao</h2>
+          <p class="product-card__price">₡285.000</p>
+          <p class="product-card__info">Tapizado y estructura de metal</p>
+        </div>
+        <button class="btn btn--ghost btn--small product-card__add" type="button" data-add>Agregar<span class="visually-hidden"> Butaca Cacao al carrito</span></button>
+      </li>
+      <li class="product-card" data-id="sillon-ebano" data-nombre="Sillón Ébano" data-precio="320000" data-img="img/sillon-ebano.jpg" data-info="Madera y tapizado negro" data-tipo="butaca" data-color="negro" data-tamano="grande" data-material="madera tapizado" data-precio-rango="alto" data-forma="recta" data-disponibilidad="encargo" data-coleccion="contemporanea" data-busqueda="sillón ébano madera y tapizado negro butaca negro madera tapizado contemporanea">
+        <figure class="product-card__media">
+          <img class="product-card__img" src="img/sillon-ebano.jpg" alt="Detalle de sillón con brazos de madera y asiento tapizado en negro" width="274" height="284" loading="lazy">
+        </figure>
+        <div class="product-card__head">
+          <h2 class="product-card__name">Sillón Ébano</h2>
+          <p class="product-card__price">₡320.000</p>
+          <p class="product-card__info">Madera y tapizado negro</p>
+        </div>
+        <button class="btn btn--ghost btn--small product-card__add" type="button" data-add>Agregar<span class="visually-hidden"> Sillón Ébano al carrito</span></button>
+      </li>
+      <li class="product-card" data-id="silla-esmeralda" data-nombre="Silla Esmeralda" data-precio="135000" data-img="img/silla-esmeralda.jpg" data-info="Madera y tapizado verde" data-tipo="silla" data-color="verde" data-tamano="mediano" data-material="madera tapizado" data-precio-rango="medio" data-forma="recta" data-disponibilidad="stock" data-coleccion="nordica" data-busqueda="silla esmeralda madera y tapizado verde silla verde madera tapizado nordica">
+        <figure class="product-card__media">
+          <img class="product-card__img" src="img/silla-esmeralda.jpg" alt="Silla con asiento y respaldo tapizados en verde oscuro y patas de madera" width="274" height="284" loading="lazy">
+        </figure>
+        <div class="product-card__head">
+          <h2 class="product-card__name">Silla Esmeralda</h2>
+          <p class="product-card__price">₡135.000</p>
+          <p class="product-card__info">Madera y tapizado verde</p>
+        </div>
+        <button class="btn btn--ghost btn--small product-card__add" type="button" data-add>Agregar<span class="visually-hidden"> Silla Esmeralda al carrito</span></button>
+      </li>
+      <li class="product-card" data-id="mecedora-bejuco" data-nombre="Mecedora Bejuco" data-precio="195000" data-img="" data-info="Bejuco tejido" data-tipo="mecedora" data-color="natural" data-tamano="grande" data-material="bejuco" data-precio-rango="medio" data-forma="curva" data-disponibilidad="encargo" data-coleccion="nordica" data-busqueda="mecedora bejuco bejuco tejido mecedora natural bejuco nordica">
+        <figure class="product-card__media">
+          
+          <div class="placeholder" role="img" aria-label="Mecedora de bejuco tejido con cojín claro">Foto próximamente</div>
+        </figure>
+        <div class="product-card__head">
+          <h2 class="product-card__name">Mecedora Bejuco</h2>
+          <p class="product-card__price">₡195.000</p>
+          <p class="product-card__info">Bejuco tejido</p>
+        </div>
+        <button class="btn btn--ghost btn--small product-card__add" type="button" data-add>Agregar<span class="visually-hidden"> Mecedora Bejuco al carrito</span></button>
+      </li>
+      <li class="product-card" data-id="taburete-taller" data-nombre="Taburete Taller" data-precio="89000" data-img="img/taburete-taller.jpg" data-info="Estructura de metal negro" data-tipo="taburete" data-color="negro" data-tamano="pequeno" data-material="metal" data-precio-rango="bajo" data-forma="recta" data-disponibilidad="stock" data-coleccion="minimalista" data-busqueda="taburete taller estructura de metal negro taburete negro metal minimalista">
+        <figure class="product-card__media">
+          <img class="product-card__img" src="img/taburete-taller.jpg" alt="Taburete alto negro de metal con asiento redondo, sobre fondo gris claro" width="274" height="284" loading="lazy">
+        </figure>
+        <div class="product-card__head">
+          <h2 class="product-card__name">Taburete Taller</h2>
+          <p class="product-card__price">₡89.000</p>
+          <p class="product-card__info">Estructura de metal negro</p>
+        </div>
+        <button class="btn btn--ghost btn--small product-card__add" type="button" data-add>Agregar<span class="visually-hidden"> Taburete Taller al carrito</span></button>
+      </li>
+      <li class="product-card" data-id="silla-nube" data-nombre="Silla Nube" data-precio="98000" data-img="" data-info="Madera en acabado blanco" data-tipo="silla" data-color="blanco" data-tamano="mediano" data-material="madera" data-precio-rango="bajo" data-forma="recta" data-disponibilidad="stock" data-coleccion="minimalista" data-busqueda="silla nube madera en acabado blanco silla blanco madera minimalista">
+        <figure class="product-card__media">
+          
+          <div class="placeholder" role="img" aria-label="Silla blanca de madera frente a una pared azul marino">Foto próximamente</div>
+        </figure>
+        <div class="product-card__head">
+          <h2 class="product-card__name">Silla Nube</h2>
+          <p class="product-card__price">₡98.000</p>
+          <p class="product-card__info">Madera en acabado blanco</p>
+        </div>
+        <button class="btn btn--ghost btn--small product-card__add" type="button" data-add>Agregar<span class="visually-hidden"> Silla Nube al carrito</span></button>
+      </li>
+      <li class="product-card" data-id="taburete-faro" data-nombre="Taburete Faro" data-precio="110000" data-img="" data-info="Madera y metal" data-tipo="taburete" data-color="natural" data-tamano="mediano" data-material="madera metal" data-precio-rango="medio" data-forma="recta" data-disponibilidad="stock" data-coleccion="minimalista" data-busqueda="taburete faro madera y metal taburete natural madera metal minimalista">
+        <figure class="product-card__media">
+          
+          <div class="placeholder" role="img" aria-label="Taburete alto de madera con una lámpara de escritorio encima">Foto próximamente</div>
+        </figure>
+        <div class="product-card__head">
+          <h2 class="product-card__name">Taburete Faro</h2>
+          <p class="product-card__price">₡110.000</p>
+          <p class="product-card__info">Madera y metal</p>
+        </div>
+        <button class="btn btn--ghost btn--small product-card__add" type="button" data-add>Agregar<span class="visually-hidden"> Taburete Faro al carrito</span></button>
+      </li>
+      <li class="product-card" data-id="silla-bistro" data-nombre="Silla Bistró" data-precio="125000" data-img="" data-info="Madera curvada" data-tipo="silla" data-color="cafe" data-tamano="mediano" data-material="madera" data-precio-rango="medio" data-forma="curva" data-disponibilidad="encargo" data-coleccion="contemporanea" data-busqueda="silla bistró madera curvada silla cafe madera contemporanea">
+        <figure class="product-card__media">
+          
+          <div class="placeholder" role="img" aria-label="Silla de madera curvada estilo bistró junto a una cortina clara">Foto próximamente</div>
+        </figure>
+        <div class="product-card__head">
+          <h2 class="product-card__name">Silla Bistró</h2>
+          <p class="product-card__price">₡125.000</p>
+          <p class="product-card__info">Madera curvada</p>
+        </div>
+        <button class="btn btn--ghost btn--small product-card__add" type="button" data-add>Agregar<span class="visually-hidden"> Silla Bistró al carrito</span></button>
+      </li>
+          </ul>
+          <div class="catalog__empty" id="sin-resultados" hidden>
+            <p>No encontramos piezas con esos filtros. Prueba quitando alguno.</p>
+            <button class="btn" type="button" data-clear-filters>Limpiar filtros</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <ul class="social">
+        <li><a class="social__link" href="https://www.facebook.com/martina.studio" target="_blank" rel="noopener noreferrer"><span class="icon icon--facebook" aria-hidden="true"></span><span class="visually-hidden">Facebook de martina. (se abre en una pestaña nueva)</span></a></li>
+        <li><a class="social__link" href="https://www.instagram.com/martina.studio" target="_blank" rel="noopener noreferrer"><span class="icon icon--instagram" aria-hidden="true"></span><span class="visually-hidden">Instagram de martina. (se abre en una pestaña nueva)</span></a></li>
+        <li><a class="social__link" href="mailto:martina@studio.com"><span class="icon icon--mail" aria-hidden="true"></span><span class="visually-hidden">Enviar correo a martina@studio.com</span></a></li>
+      </ul>
+      <div class="site-footer__meta">
+        <a class="site-footer__link" href="preguntas-frecuentes.html">FAQ</a>
+        <p class="site-footer__copy">&copy; Martina Studio 2026</p>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
